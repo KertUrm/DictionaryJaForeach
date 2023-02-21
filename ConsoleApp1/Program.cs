@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
@@ -6,7 +7,16 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var koolid = new Dictionary<int, string>
+            {
+                {1,"Tallinna Tehnikagümnaasium"},
+                {2,"Tallinna Arte Gümnaasium"},
+                {3,"Tallinna 32. Keskkool"},
+            };
+            foreach (var kool in koolid)
+            {
+                Console.WriteLine($"{kool.Key} - {kool.Value}");
+            }
         }
     }
 }
